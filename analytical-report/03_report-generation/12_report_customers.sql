@@ -71,6 +71,9 @@ GROUP BY
 	customer_name,
 	age
 )
+/*---------------------------------------------------------------------------
+  3) Final Query: Combines all customer results into one output
+---------------------------------------------------------------------------*/
 SELECT
 customer_key,
 customer_number,
@@ -104,3 +107,4 @@ CASE WHEN lifespan = 0 THEN total_sales
      ELSE total_sales / lifespan
 END AS avg_monthly_spend
 FROM customer_aggregation
+GO
